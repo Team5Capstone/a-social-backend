@@ -54,35 +54,28 @@ INSERT INTO categories (category_name) VALUES
   ('Hobbies'),
   ('General Chat');
 
-INSERT INTO forums (category_id, user_id, forum_title, forum_description, forum_posts)
+INSERT INTO forums (category_id, user_id, forum_title, forum_description, forum_posts, badge_id)
 VALUES
-  (1, 1, 'Forum about Mental Health', 'Discussion about mental health and well-being', 'How do you guys deal with stress? Personally I like to meditate'),
-  (2, 2, 'Support for Anxiety', 'Support group for people dealing with anxiety', 'Share your experiences and find support'),
-  (2, 3, 'Accessibility in Mental Health', 'Improving accessibility in mental health services', 'Discuss ways to make mental health support more accessible'),
-  (5, 4, 'Hobbies for Relaxation', 'Sharing hobbies and activities that promote relaxation', 'Discover new hobbies for stress relief'),
-  (1, 1, 'Coping with Grief and Loss', 'Support group for coping with grief and loss', 'Share your journey and find solace'),
-  (3, 2, 'Positive Vibes', 'Spreading positivity and uplifting messages', 'Share inspiring stories and motivational content'),
-  (4, 3, 'Family Support', 'Support group for families dealing with mental health challenges', 'Discuss challenges and share resources'),
-  (5, 2, 'Food discussion','Sharing Recipes and discussing topics', 'What is the best dish you ever made?'),
-  (6, 4, 'General Chat', 'Open discussion about various topics', 'Engage in casual conversations');
-
-INSERT INTO forum_badges (forum_id, badge_id) VALUES
-  (1, 1),
-  (1, 2),
-  (2, 3),
-  (3, 4),
-  (4, 5);
+  (1, 1, 'Forum about Mental Health', 'Discussion about mental health and well-being', 'How do you guys deal with stress? Personally, I like to meditate', 1),
+  (2, 2, 'Support for Anxiety', 'Support group for people dealing with anxiety', 'Share your experiences and find support', 2),
+  (2, 3, 'Accessibility in Mental Health', 'Improving accessibility in mental health services', 'Discuss ways to make mental health support more accessible', 3),
+  (5, 4, 'Hobbies for Relaxation', 'Sharing hobbies and activities that promote relaxation', 'Discover new hobbies for stress relief', 4),
+  (1, 1, 'Coping with Grief and Loss', 'Support group for coping with grief and loss', 'Share your journey and find solace', 5),
+  (3, 2, 'Positive Vibes', 'Spreading positivity and uplifting messages', 'Share inspiring stories and motivational content', 6),
+  (4, 3, 'Family Support', 'Support group for families dealing with mental health challenges', 'Discuss challenges and share resources', 7),
+  (5, 2, 'Food discussion', 'Sharing Recipes and discussing topics', 'What is the best dish you ever made?', 8),
+  (6, 4, 'General Chat', 'Open discussion about various topics', 'Engage in casual conversations', 5);
 
 INSERT INTO forum_replies (reply_content, reply_created_at, user_id, forum_id) VALUES
     ('I eat.', CURRENT_TIMESTAMP, 2, 1),
-    ('I have a secret dance routine that I perform in my room. Its my stress-busting groove!', CURRENT_TIMESTAMP, 3, 1),
+    ('I have a secret dance routine that I perform in my room. It''s my stress-busting groove!', CURRENT_TIMESTAMP, 3, 1),
     ('I transform stress into art. I splatter paint on a canvas and let my emotions create a beautiful mess.', CURRENT_TIMESTAMP, 4, 1),
     ('I find solace in baking elaborate desserts. The smell of freshly baked goods melts my stress away.', CURRENT_TIMESTAMP, 5, 1),
     ('I tackle stress head-on by tackling a challenging crossword puzzle. The mental focus helps me forget about everything else.', CURRENT_TIMESTAMP, 6, 1),
     ('When stress strikes, I gather my thoughts and head to a peaceful spot in nature, where I practice meditation and deep breathing exercises.', CURRENT_TIMESTAMP, 7, 1),
     ('I find solace in baking elaborate desserts. The smell of freshly baked goods melts my stress away.', CURRENT_TIMESTAMP, 8, 1),
     ('I rely on the power of laughter. I watch comedy shows, tell jokes, and tickle myself silly!', CURRENT_TIMESTAMP, 9, 1),
-    ('Whenever stress hits, I escape to a virtual reality world and slay dragons. Its my ultimate stress relief!', CURRENT_TIMESTAMP, 10, 1),
+    ('Whenever stress hits, I escape to a virtual reality world and slay dragons. It''s my ultimate stress relief!', CURRENT_TIMESTAMP, 10, 1),
     ('I like to jog.', CURRENT_TIMESTAMP, 1, 1),
     ('Anxiety can be tough, but remember that you are not alone in this.', CURRENT_TIMESTAMP, 2, 2),
     ('Improving accessibility in mental health services is essential for a more inclusive society.', CURRENT_TIMESTAMP, 3, 3),
@@ -90,7 +83,7 @@ INSERT INTO forum_replies (reply_content, reply_created_at, user_id, forum_id) V
     ('Coping with grief is a journey, and finding support is important.', CURRENT_TIMESTAMP, 5, 5),
     ('Spreading positivity is a wonderful way to make a difference in someone''s day.', CURRENT_TIMESTAMP, 6, 6),
     ('Supporting families dealing with mental health challenges is crucial for their well-being.', CURRENT_TIMESTAMP, 7, 7),
-    ('Its great to have a place for casual conversations and general chat.', CURRENT_TIMESTAMP, 8, 8),
+    ('It''s great to have a place for casual conversations and general chat.', CURRENT_TIMESTAMP, 8, 9),
     ('Art and design have always inspired me to express myself creatively.', CURRENT_TIMESTAMP, 9, 9),
     ('Mental health is something we should prioritize in our lives.', CURRENT_TIMESTAMP, 2, 1),
     ('I have struggled with anxiety, and finding support made a huge difference.', CURRENT_TIMESTAMP, 3, 2),
